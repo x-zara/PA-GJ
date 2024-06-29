@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     // Damping for locomotion animator parameter
     public float locomotionParameterDamping = 0.1f;
 
+    // Check if the player is audible
+    public bool isAudible;
+
     // Animator playing animations
     private Animator animator;
 
@@ -69,5 +72,8 @@ public class PlayerController : MonoBehaviour
             Quaternion targetCharacterRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetCharacterRotation, rotationSpeed * Time.deltaTime);
         }
+
+        // Character is audible, when moving fast
+        isAudible = speed >= 0.5f;
     }
 }
