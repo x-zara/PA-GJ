@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CursorManager : MonoBehaviour
-{
+{/*
     private void OnApplicationFocus(bool focus)
     {
        if(focus)
@@ -14,5 +14,5 @@ public class CursorManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }
-    }
+    }*/
 }
