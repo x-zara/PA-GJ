@@ -6,16 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public TextMeshProUGUI highscoreLabel;
     public GameObject infoDialogue;
     public bool isInfoOn;
 
     void Start()
     {
-        // Highscore Text/Anzeige
-        int highscore = PlayerPrefs.GetInt("highscore", 0);
-        highscoreLabel.text = "Highscore: " + highscore;
-
+       
     }
 
     public void Info(bool doInfo)
