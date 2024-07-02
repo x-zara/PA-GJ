@@ -9,12 +9,6 @@ public class MenuManager : MonoBehaviour
     public GameObject infoDialogue;
     public bool isInfoOn;
 
-
-    void Start()
-    {
-
-    }
-
     public void Info(bool doInfo)
     {
         // Infodialog
@@ -26,16 +20,12 @@ public class MenuManager : MonoBehaviour
     // Applikation beenden
     public void QuitGame()
     {
-
         Application.Quit();
-
     }
 
     // Spiel starten -> Wechsel zur GameView Szene
     public void StartGame()
     {
-
         SceneManager.LoadScene(1);
-
     }
 }
