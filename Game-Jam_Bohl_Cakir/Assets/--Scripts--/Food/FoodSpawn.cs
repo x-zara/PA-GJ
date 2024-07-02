@@ -50,9 +50,9 @@ public class FoodSpawn : MonoBehaviour
     {
         float _zPosition = (_spawner.transform.position.z + Random.Range(-_zRange, _zRange));
         float _xPosition = (_spawner.transform.position.x + Random.Range(-_xRange, _xRange));
-        print(_zPosition);
+        
         _spawnPosition = new Vector3(_xPosition, _spawner.gameObject.transform.position.y, _zPosition);
-        print(_spawnPosition);
+        index = Random.Range(0, foodItems.Length);
         GameObject.Instantiate(foodItems[index], _spawnPosition, Quaternion.identity );
     }
 }
