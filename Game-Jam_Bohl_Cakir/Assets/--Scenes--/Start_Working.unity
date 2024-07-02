@@ -403,7 +403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88705420}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.06781786, y: 0.8185449, z: 0.098810546, w: 0.561802}
+  m_LocalRotation: {x: -0.06781793, y: 0.8185448, z: 0.098810606, w: 0.5618022}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -511,6 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137726605}
   - component: {fileID: 137726604}
+  - component: {fileID: 137726606}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -531,6 +532,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuDialogue: {fileID: 1548100334}
+  isPaused: 0
+  isGameOver: 0
 --- !u!4 &137726605
 Transform:
   m_ObjectHideFlags: 0
@@ -546,6 +549,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &137726606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137726603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e3158f9be8b3e418acba95f0883537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &141984927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2253851973533426326, guid: 132039c8758c814419a0266a1a7f0e76,
@@ -2254,6 +2269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 814642911}
   - component: {fileID: 814642912}
+  - component: {fileID: 814642913}
   m_Layer: 0
   m_Name: Trigger_Vegatablemarket
   m_TagString: Untagged
@@ -2298,6 +2314,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.650539, y: 3.659281, z: 2.6168222}
   m_Center: {x: 0.23909466, y: 1.3296405, z: 2.5372596}
+--- !u!114 &814642913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814642910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f41c14d815fc6409bc9b3176a738c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &909186853
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,6 +2371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1080830584}
   - component: {fileID: 1080830585}
+  - component: {fileID: 1080830586}
   m_Layer: 0
   m_Name: Trigger_Meatmarket
   m_TagString: Untagged
@@ -2387,6 +2416,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.068022, y: 3.659281, z: 2.6168222}
   m_Center: {x: -0.14158763, y: 1.3296405, z: 2.5372546}
+--- !u!114 &1080830586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080830583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f41c14d815fc6409bc9b3176a738c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1096842211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7699200157100470150, guid: b85196613c7d9ca449e769ff9fce44db,
@@ -2464,8 +2505,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174074750}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.070460856, y: 0.8180709, z: 0.10266139, w: 0.56147665}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0000019035049, y: 0, z: 0.0000009613233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2596,6 +2637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228736775}
   - component: {fileID: 1228736776}
+  - component: {fileID: 1228736777}
   m_Layer: 0
   m_Name: Trigger_Bakery
   m_TagString: Untagged
@@ -2640,6 +2682,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.262171, y: 3.659281, z: 2.6168222}
   m_Center: {x: -0.25414726, y: 1.3296405, z: 2.5372555}
+--- !u!114 &1228736777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228736774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f41c14d815fc6409bc9b3176a738c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1236379344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,8 +3534,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532027257}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.040177066, y: 0.821284, z: 0.058286812, w: 0.56611055}
-  m_LocalPosition: {x: -17.058235, y: 2.56, z: 13.263238}
+  m_LocalRotation: {x: -0.040177055, y: 0.82128394, z: 0.058286794, w: 0.56611055}
+  m_LocalPosition: {x: -17.058233, y: 2.56, z: 13.263237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3770,7 +3824,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617835413}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.040059984, y: 0.8224185, z: 0.058367334, w: 0.56446093}
+  m_LocalRotation: {x: -0.040059976, y: 0.8224186, z: 0.05836731, w: 0.564461}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4193,6 +4247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1864073956}
   - component: {fileID: 1864073957}
+  - component: {fileID: 1864073958}
   m_Layer: 0
   m_Name: Trigger_Fishmarket
   m_TagString: Untagged
@@ -4237,6 +4292,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.262171, y: 3.659281, z: 2.6168222}
   m_Center: {x: -0.25414726, y: 1.3296405, z: 2.5372555}
+--- !u!114 &1864073958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864073955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f41c14d815fc6409bc9b3176a738c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1946420581
 GameObject:
   m_ObjectHideFlags: 0
@@ -4369,7 +4436,7 @@ Transform:
   m_GameObject: {fileID: 1946420581}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.002007169, z: -0, w: 0.99999803}
-  m_LocalPosition: {x: -17.058235, y: 2.56, z: 13.263238}
+  m_LocalPosition: {x: -17.058233, y: 2.56, z: 13.263237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4558,7 +4625,7 @@ PrefabInstance:
     - target: {fileID: 6577899748296958345, guid: 274ba41ea6a257048a188d00177b298a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6577899748296958349, guid: 274ba41ea6a257048a188d00177b298a,
         type: 3}

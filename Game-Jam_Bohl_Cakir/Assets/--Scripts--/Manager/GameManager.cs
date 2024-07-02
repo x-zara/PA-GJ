@@ -10,9 +10,12 @@ public class GameManager : MonoBehaviour
     //public GameObject gameOverDialogue;
     public GameObject pauseMenuDialogue;
 
+    public bool isPaused = false;
+    public bool isGameOver = false;
+
     private bool isGameStarted = true;
-    private bool isGameOver = false;
-    private bool isPaused = false;
+    
+    
 
     //Keine doppelten GameManager beim erneuten Laden von Szenen
     private void Awake()
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !isGameOver)
         {
             PauseGame(!isPaused);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

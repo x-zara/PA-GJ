@@ -9,9 +9,10 @@ public class MenuManager : MonoBehaviour
     public GameObject infoDialogue;
     public bool isInfoOn;
 
+
     void Start()
     {
-       
+
     }
 
     public void Info(bool doInfo)
