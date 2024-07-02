@@ -5,6 +5,8 @@ using TMPro;
 
 public class DisplayText : MonoBehaviour
 {
+    public bool isClose;
+    
     // The UI label to be turned on and off
     private TextMeshProUGUI _label;
     
@@ -27,6 +29,8 @@ public class DisplayText : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _label.gameObject.SetActive(true);
+
+            isClose = true;
         }
     }
 
@@ -35,6 +39,8 @@ public class DisplayText : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _label.gameObject.SetActive(false);
+
+            isClose = false;
         }
     }
 }
