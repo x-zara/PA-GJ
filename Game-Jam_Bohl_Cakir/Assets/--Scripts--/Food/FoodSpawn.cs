@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,9 +8,9 @@ public class FoodSpawn : MonoBehaviour
 {
     public GameObject[] foodItems;
     
-    private float _zRange;
+    public float _zRange;
 
-    private float _xRange;
+    public float _xRange;
 
     private Renderer _renderer;
 
@@ -48,11 +49,11 @@ public class FoodSpawn : MonoBehaviour
     // Spawns a food item from the selected shop using the size of the spawner as range
     public void SpawnFood(int index)
     {
-        float _zPosition = (_spawner.transform.position.z + Random.Range(-_zRange, _zRange));
-        float _xPosition = (_spawner.transform.position.x + Random.Range(-_xRange, _xRange));
+        float _zPosition = (_spawner.transform.position.z + UnityEngine.Random.Range(-_zRange, _zRange));
+        float _xPosition = (_spawner.transform.position.x + UnityEngine.Random.Range(-_xRange, _xRange));
         
         _spawnPosition = new Vector3(_xPosition, _spawner.gameObject.transform.position.y, _zPosition);
-        index = Random.Range(0, foodItems.Length);
+        index = UnityEngine.Random.Range(0, foodItems.Length);
         GameObject.Instantiate(foodItems[index], _spawnPosition, Quaternion.identity );
     }
 }

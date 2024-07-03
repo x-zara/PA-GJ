@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: swordfish
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 216af29fb8329d948aacd9ef677bee72,
+        type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -149,3 +154,4 @@ MonoBehaviour:
   satiety: 0
   rotting: 0
   weight: 0
+  _foodManagement: {fileID: 0}

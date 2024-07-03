@@ -30,6 +30,11 @@ public class SetPlayerToCart : MonoBehaviour
         {
             SetToCart();
         }
+
+        if (hasGrabbed)
+        {
+            _displayText._label.gameObject.SetActive(false);
+        }
     }
 
     private void SetToCart()

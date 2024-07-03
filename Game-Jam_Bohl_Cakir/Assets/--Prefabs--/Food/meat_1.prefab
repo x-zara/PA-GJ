@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6109762070630048219}
   m_Layer: 0
   m_Name: meat_1
-  m_TagString: Meat
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,5 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   satiety: 10
-  rotting: 10
+  rotting: 0.1
   weight: 2
+  _foodManagement: {fileID: 0}

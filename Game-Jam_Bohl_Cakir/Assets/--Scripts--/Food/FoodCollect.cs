@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class FoodCollect : MonoBehaviour
 {
-    public Meat _meat;
     
     
     private FoodManagement _foodManagement;
+
+    private Food _food;
 
 
     
@@ -25,11 +26,13 @@ public class FoodCollect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Meat"))
+        if (other.CompareTag("Food"))
         {
-            _meat.AddMeat();
+            _food = other.GetComponent<Food>();
+            _food.AddStats();
+            Destroy(other.gameObject);
         }
 
-        Destroy(other.gameObject);
+        
     }
 }

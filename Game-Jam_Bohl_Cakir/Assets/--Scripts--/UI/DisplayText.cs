@@ -8,7 +8,7 @@ public class DisplayText : MonoBehaviour
     public bool isClose;
     
     // The UI label to be turned on and off
-    private TextMeshProUGUI _label;
+    public TextMeshProUGUI _label;
     
     // Start is called before the first frame update
     void Start()
