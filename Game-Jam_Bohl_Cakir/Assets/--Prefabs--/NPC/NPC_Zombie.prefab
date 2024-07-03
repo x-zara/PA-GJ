@@ -61,6 +61,8 @@ GameObject:
   - component: {fileID: 5601019200562791413}
   - component: {fileID: 8145173746289037054}
   - component: {fileID: 2219966214211694597}
+  - component: {fileID: 3103728848052699192}
+  - component: {fileID: 3933192108477731944}
   m_Layer: 0
   m_Name: NPC_Zombie
   m_TagString: Untagged
@@ -132,6 +134,42 @@ MonoBehaviour:
     FleeDistance: 0
   HideState:
     HidingSpots: []
+--- !u!136 &3103728848052699192
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2538056193832204337}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3933192108477731944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2538056193832204337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed30875e1f329db44b5da5cb58fa0dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieRot: 0.05
 --- !u!1 &2776516922846392864
 GameObject:
   m_ObjectHideFlags: 0
