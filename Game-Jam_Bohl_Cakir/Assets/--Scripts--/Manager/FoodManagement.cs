@@ -22,17 +22,27 @@ public class FoodManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _startingHealth = 1;
-        _endingHealth = 0;
+        _startingHealth = 1f;
+        currentHealth = 1f;
+        currentHealth = _startingHealth - rotting;
+        print(currentHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //currentHealth = _startingHealth - rotting;
-        currentHealth = Mathf.Lerp(_endingHealth, _startingHealth, currentRot);
+        
         print(currentHealth);
+        
+        //StartCoroutine(Rot());
+
+        currentHealth -= rotting * Time.deltaTime;
     }
 
+    IEnumerator Rot()
+    {
+        yield return new WaitForSeconds(3);
+        currentHealth -= rotting;
 
+    }
 }

@@ -27,7 +27,6 @@ public class StatBars : MonoBehaviour
 
         _foodManagement = GameObject.Find("GameManager").GetComponent<FoodManagement>();
 
-        _slider.value = 1;
     }
 
     // Update is called once per frame

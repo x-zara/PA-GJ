@@ -149,6 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   satiety: 5
-  rotting: 5
+  rotting: 0.001
   weight: 1
   _foodManagement: {fileID: 0}
