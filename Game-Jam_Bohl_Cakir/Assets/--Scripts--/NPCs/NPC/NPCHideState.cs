@@ -13,7 +13,7 @@ public class NPCHideState : BaseState
         Debug.Log("NPCPatrolState:OnEnterState");
         NPCStateMachine npcStateMachine = controller as NPCStateMachine;
         
-        targetPosition = GetNearestHidingSpot(npcStateMachine.transform.position);
+        //targetPosition = GetNearestHidingSpot(npcStateMachine.transform.position);
         npcStateMachine.SetDestination(targetPosition);
         npcStateMachine.SetAgentSpeedMultiplier(2.5f);
     }

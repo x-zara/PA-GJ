@@ -35,7 +35,7 @@ public class NPCStateMachine : BaseStateMachine
         _player = GameObject.Find("Player").transform;
         _agent = GetComponent<NavMeshAgent>();
         _initialAgentSpeed = _agent.speed;
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
 
         CurrentState = IdleState;
         CurrentState.OnEnterState(this);
@@ -43,7 +43,7 @@ public class NPCStateMachine : BaseStateMachine
 
     public override void Tick()
     {
-        _animator.SetFloat("speed", _agent.velocity.magnitude);
+        _animator.SetFloat("MoveSpeed", _agent.velocity.magnitude);
     }
 
     public void SetDestination(Vector3 destination) 
