@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WinningCondition : MonoBehaviour
 {
-    public AnimationClip _fadeIn;
 
     public GameObject[] gameOverDialogue;
 

@@ -29,6 +29,8 @@ public class ShowFood : MonoBehaviour
       
             Decorations[0].gameObject.SetActive(true);
             Decorations[1].gameObject.SetActive(true);
+            Decorations[2].gameObject.SetActive(false);
+            Decorations[3].gameObject.SetActive(false);
 
         } 
         
@@ -36,6 +38,9 @@ public class ShowFood : MonoBehaviour
         {
             Decorations[2].gameObject.SetActive(true);
             Decorations[3].gameObject.SetActive(true);
+            Decorations[4].gameObject.SetActive(false);
+            Decorations[5].gameObject.SetActive(false);
+            Decorations[6].gameObject.SetActive(false);
         }
         
         if (_foodManagment.satiety >= 150)

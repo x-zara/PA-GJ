@@ -12,7 +12,7 @@ public class Food : MonoBehaviour
 
     public float weight;
 
-    private int _colliderDamage = 50;
+    private int _colliderDamage = 25;
 
     private void Start()
     {

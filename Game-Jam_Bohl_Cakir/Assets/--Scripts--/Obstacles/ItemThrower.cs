@@ -53,7 +53,7 @@ public class ItemThrower : MonoBehaviour
 
     IEnumerator WaitTilRemove()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         Destroy(_rb.gameObject);
 
     }
