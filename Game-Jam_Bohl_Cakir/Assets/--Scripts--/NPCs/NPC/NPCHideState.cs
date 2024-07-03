@@ -9,7 +9,7 @@ public class NPCHideState : BaseState
     private Vector3 targetPosition;
 
     private Transform _playerTransform;
-
+    
     public override void OnEnterState(BaseStateMachine controller)
     {
         Debug.Log("NPCPatrolState:OnEnterState");
@@ -19,6 +19,7 @@ public class NPCHideState : BaseState
         _playerTransform = GameObject.Find("Player").transform;
         npcStateMachine.SetDestination(_playerTransform.position);
         npcStateMachine.SetAgentSpeedMultiplier(1.5f);
+
     }
 
     public override void OnUpdateState(BaseStateMachine controller)
