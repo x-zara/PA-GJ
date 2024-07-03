@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FoodManagement : MonoBehaviour
 {
+    public static FoodManagement Instance { get; private set; }   
+
     public int satiety;
 
     public float currentHealth;
@@ -22,6 +24,8 @@ public class FoodManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
+
         _startingHealth = 1f;
         currentHealth = 1f;
         currentHealth = _startingHealth - rotting;

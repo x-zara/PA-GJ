@@ -16,6 +16,8 @@ public class ItemThrower : MonoBehaviour
 
     private FoodSpawn _foodSpawn;
 
+    private Food _food;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +41,20 @@ public class ItemThrower : MonoBehaviour
 
         _spawnPosition = _spawner.gameObject.transform.position;
         int index = UnityEngine.Random.Range(0, foodItems.Length);
-        GameObject.Instantiate(foodItems[index], _spawnPosition, Quaternion.identity);
-        _rb = foodItems[index].GetComponent<Rigidbody>();
+        GameObject newItem = GameObject.Instantiate(foodItems[index], _spawnPosition, Quaternion.identity);
+        _rb = newItem.GetComponent<Rigidbody>();
         Vector3 _offset = new Vector3(UnityEngine.Random.Range(0, 1), 0, 0);
         _rb.AddForce((Vector3.up + _offset )* _forceStrength, ForceMode.Impulse);
+        _food = _rb.gameObject.GetComponent<Food>();
+        _food.RemoveStats();
+        StartCoroutine(WaitTilRemove());
+        
+    }
+
+    IEnumerator WaitTilRemove()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(_rb.gameObject);
+
     }
 }

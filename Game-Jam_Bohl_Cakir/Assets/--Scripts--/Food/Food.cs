@@ -10,20 +10,32 @@ public class Food : MonoBehaviour
 
     public float weight;
 
-    public FoodManagement _foodManagement;
+    //public FoodManagement _foodManagement;
 
     private void Start()
     {
-        _foodManagement = GameObject.Find("GameManager").GetComponent<FoodManagement>();
+        //_foodManagement = GameObject.Find("GameManager").GetComponent<FoodManagement>();
     }
 
     public void AddStats()
     {
-        _foodManagement.satiety += satiety;
-        _foodManagement.weight += weight;
-        if (_foodManagement.rotting < rotting)
+        FoodManagement.Instance.satiety += satiety;
+        FoodManagement.Instance.weight += weight;
+        if (FoodManagement.Instance.rotting < rotting)
         {
-            _foodManagement.rotting = rotting;
+            FoodManagement.Instance.rotting = rotting;
+        }
+    }
+
+    public void RemoveStats()
+    {
+        print("Hello");
+        FoodManagement.Instance.satiety -= satiety;
+
+        FoodManagement.Instance.weight -= weight;
+        if (FoodManagement.Instance.rotting < rotting)
+        {
+            FoodManagement.Instance.rotting = rotting;
         }
     }
 
