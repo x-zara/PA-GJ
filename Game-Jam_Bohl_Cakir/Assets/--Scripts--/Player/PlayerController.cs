@@ -50,11 +50,11 @@ public class PlayerController : MonoBehaviour
         float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
 
         // Should walk? (left or right shift held)
-        bool shouldWalk = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        //bool shouldWalk = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
         // Set speed to half of input when charakter should walk
         // otherwise use horizontal input
-        float speed = shouldWalk ? inputMagnitude * 0.333f : inputMagnitude;
+        float speed = inputMagnitude * 1.2f;
 
         // Set animator isWalking parameter depending on input
         animator.SetBool(isWalkingParameterHash, inputMagnitude > 0);

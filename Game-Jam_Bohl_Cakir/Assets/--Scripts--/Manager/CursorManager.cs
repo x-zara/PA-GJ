@@ -15,25 +15,25 @@ public class CursorManager : MonoBehaviour
 
     public void OnApplicationFocus(bool focus)
     {
-        if(focus)
+        /*if(focus)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
             Cursor.lockState = CursorLockMode.None;
-        }
+        }*/
     }
 
     private void Update()
     {
-         if (_gameManager.isPaused == false || _gameManager.isGameOver)
+         if (_gameManager.isPaused)
          {
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.None;
          }
         else
         {
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
    
