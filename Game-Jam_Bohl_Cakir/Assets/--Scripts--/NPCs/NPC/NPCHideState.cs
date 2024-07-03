@@ -26,16 +26,17 @@ public class NPCHideState : BaseState
         Debug.Log("NPCPatrolState:OnUpdateState");
 
         NPCStateMachine npcStateMachine = controller as NPCStateMachine;
-
+        npcStateMachine.SetDestination(_playerTransform.position);
+        npcStateMachine.SetAgentSpeedMultiplier(1.5f);
         // Transitions
         // NPC reached waypoint? > Switch to idle
-        float sqrtDistance = (npcStateMachine.transform.position - targetPosition).sqrMagnitude;
-        Debug.Log("dist: " + sqrtDistance);
+        //float sqrtDistance = (npcStateMachine.transform.position - targetPosition).sqrMagnitude;
+        //Debug.Log("dist: " + sqrtDistance);
 
-        if (sqrtDistance < 3f) 
+        /*if (sqrtDistance < 3f) 
         {
             npcStateMachine.SwitchToState(npcStateMachine.IdleState);
-        }
+        }*/
     }
 
     public override void OnExitState(BaseStateMachine controller)

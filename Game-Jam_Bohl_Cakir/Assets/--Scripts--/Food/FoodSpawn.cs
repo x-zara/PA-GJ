@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class FoodSpawn : MonoBehaviour
 {
+    public AudioClip audioClip;
+
     public GameObject[] foodItems;
     
     public float _zRange;
@@ -19,14 +21,18 @@ public class FoodSpawn : MonoBehaviour
     private GameObject _spawner;
 
     private DisplayText _displayText;
-    
+
+    private AudioSource _audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         _displayText = GetComponent<DisplayText>();
 
         _spawner = GameObject.Find("Spawner");
-        
+
+        _audioSource = _spawner.GetComponent<AudioSource>();
+
         _renderer = _spawner.GetComponent<Renderer>();
 
         // https://discussions.unity.com/t/find-size-of-gameobject/6193
@@ -43,6 +49,7 @@ public class FoodSpawn : MonoBehaviour
         if (_displayText.isClose && Input.GetKeyDown(KeyCode.E))
         {
             SpawnFood(0);
+            _audioSource.PlayOneShot(audioClip, 1f);
         }
     }
 

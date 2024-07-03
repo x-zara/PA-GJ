@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class FoodCollect : MonoBehaviour
 {
-    
-    
     private FoodManagement _foodManagement;
 
     private Food _food;
-
-
     
     // Start is called before the first frame update
     void Start()
