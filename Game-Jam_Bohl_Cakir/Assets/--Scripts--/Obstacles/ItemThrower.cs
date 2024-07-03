@@ -43,8 +43,8 @@ public class ItemThrower : MonoBehaviour
         int index = UnityEngine.Random.Range(0, foodItems.Length);
         GameObject newItem = GameObject.Instantiate(foodItems[index], _spawnPosition, Quaternion.identity);
         _rb = newItem.GetComponent<Rigidbody>();
-        Vector3 _offset = new Vector3(UnityEngine.Random.Range(0, 1), 0, 0);
-        _rb.AddForce((Vector3.up + _offset )* _forceStrength, ForceMode.Impulse);
+        //Vector3 _offset = new Vector3(UnityEngine.Random.Range(1, 3), 0, 0);
+        _rb.AddForce((Vector3.up )* _forceStrength, ForceMode.Impulse);
         _food = _rb.gameObject.GetComponent<Food>();
         _food.RemoveStats();
         StartCoroutine(WaitTilRemove());
@@ -53,7 +53,7 @@ public class ItemThrower : MonoBehaviour
 
     IEnumerator WaitTilRemove()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Destroy(_rb.gameObject);
 
     }

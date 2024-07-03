@@ -2336,7 +2336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88705420}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.091408394, y: 0.77388835, z: 0.11482217, w: 0.61608213}
+  m_LocalRotation: {x: -0.09140839, y: 0.77388835, z: 0.114822164, w: 0.61608213}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4388,7 +4388,7 @@ MonoBehaviour:
   - {fileID: 8576936906325799223, guid: 30bd4065a86114543827c6338ec474d0, type: 3}
   - {fileID: 3518277185832944818, guid: cfe2a6dee649ddd4a9c8814990f801fd, type: 3}
   - {fileID: 1182898439458729142, guid: 2db55efc608c5e545b527d1f9c1cd192, type: 3}
-  _forceStrength: 10
+  _forceStrength: 2
 --- !u!114 &137726609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30935,7 +30935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174074750}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.09488849, y: 0.7732266, z: 0.11919349, w: 0.61555636}
+  m_LocalRotation: {x: -0.09488851, y: 0.7732266, z: 0.11919349, w: 0.6155564}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -39939,7 +39939,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532027257}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.049358856, y: 0.77866465, z: 0.06174725, w: 0.62244064}
+  m_LocalRotation: {x: -0.049358893, y: 0.77866477, z: 0.06174732, w: 0.62244046}
   m_LocalPosition: {x: -16.47021, y: 1.0401113, z: 12.551344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42584,7 +42584,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617835413}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.049234822, y: 0.7799125, z: 0.0618462, w: 0.6208765}
+  m_LocalRotation: {x: -0.049234856, y: 0.7799126, z: 0.061846267, w: 0.6208763}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -54752,6 +54752,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1801339363433668130, guid: b260128405ea31842847e869171f3de3,
+        type: 3}
+      propertyPath: Range
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2219966214211694597, guid: b260128405ea31842847e869171f3de3,
         type: 3}
       propertyPath: PatrolState.Waypoints.Array.data[0]
@@ -54771,6 +54776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPC_Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936730863216915875, guid: b260128405ea31842847e869171f3de3,
+        type: 3}
+      propertyPath: Range
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5601019200562791413, guid: b260128405ea31842847e869171f3de3,
         type: 3}
