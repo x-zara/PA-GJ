@@ -403,7 +403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88705420}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.06781784, y: 0.8185449, z: 0.09881053, w: 0.5618019}
+  m_LocalRotation: {x: -0.06781786, y: 0.818545, z: 0.09881058, w: 0.56180185}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 137726605}
   - component: {fileID: 137726604}
   - component: {fileID: 137726606}
+  - component: {fileID: 137726607}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -561,6 +562,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e3158f9be8b3e418acba95f0883537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &137726607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137726603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234335a3efd980e4c9cde6916630f039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  satiety: 0
+  rotting: 0
+  weight: 0
 --- !u!4 &141984927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2253851973533426326, guid: 132039c8758c814419a0266a1a7f0e76,

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8495759347804346522}
   - component: {fileID: 2578087174163801865}
   - component: {fileID: 7114476881520347493}
+  - component: {fileID: -1561207375367640623}
   m_Layer: 0
   m_Name: bread_1
-  m_TagString: Untagged
+  m_TagString: Vegetable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,3 +136,18 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1561207375367640623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5288355516969866559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a008b8bb4049edc44bc504b0d9c55266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  satiety: 10
+  rotting: 5
+  weight: 2
