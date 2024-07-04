@@ -28,8 +28,7 @@ public class FoodManagement : MonoBehaviour
 
         _startingHealth = 1f;
         currentHealth = 1f;
-        currentHealth = _startingHealth - rotting;
-        print(currentHealth);
+        //currentHealth = _startingHealth - rotting;
     }
 
     // Update is called once per frame

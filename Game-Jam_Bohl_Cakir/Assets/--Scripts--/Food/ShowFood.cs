@@ -49,6 +49,10 @@ public class ShowFood : MonoBehaviour
             Decorations[5].gameObject.SetActive(true);
             Decorations[6].gameObject.SetActive(true);
         }
+        else
+        {
+
+        }
 
         
     }

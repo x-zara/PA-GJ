@@ -27,7 +27,6 @@ public class ZombieDamage : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _currentRot = _foodManagement.rotting;
             StartCoroutine(ApplyZombieRot());
             
         }
@@ -35,8 +34,9 @@ public class ZombieDamage : MonoBehaviour
 
     IEnumerator ApplyZombieRot()
     {
+        _currentRot = _foodManagement.rotting;
         _foodManagement.rotting = zombieRot;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2.5f);
         _foodManagement.rotting = _currentRot;
         gameObject.SetActive(false);
     }
