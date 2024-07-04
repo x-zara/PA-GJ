@@ -9,7 +9,7 @@ public class NPCStateMachine : BaseStateMachine
 
     public NPCIdleState IdleState;
     public NPCFleeState FleeState;
-    public NPCHideState HideState;
+    public NPCFollowState FollowState;
 
     private Eyes _eyes;
     private Ears _ears;

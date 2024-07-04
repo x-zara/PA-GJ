@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class NPCHideState : BaseState
+public class NPCFollowState : BaseState
 {
     public Transform[] HidingSpots;
 
@@ -12,7 +12,7 @@ public class NPCHideState : BaseState
     
     public override void OnEnterState(BaseStateMachine controller)
     {
-        Debug.Log("NPCPatrolState:OnEnterState");
+        Debug.Log("NPCFollowState:OnEnterState");
         NPCStateMachine npcStateMachine = controller as NPCStateMachine;
         
         // follow player
@@ -24,30 +24,21 @@ public class NPCHideState : BaseState
 
     public override void OnUpdateState(BaseStateMachine controller)
     {
-        Debug.Log("NPCPatrolState:OnUpdateState");
+        Debug.Log("NPCFollowState:OnUpdateState");
 
         NPCStateMachine npcStateMachine = controller as NPCStateMachine;
         npcStateMachine.SetDestination(_playerTransform.position);
         npcStateMachine.SetAgentSpeedMultiplier(1.5f);
-        // Transitions
-        // NPC reached waypoint? > Switch to idle
-        //float sqrtDistance = (npcStateMachine.transform.position - targetPosition).sqrMagnitude;
-        //Debug.Log("dist: " + sqrtDistance);
-
-        /*if (sqrtDistance < 3f) 
-        {
-            npcStateMachine.SwitchToState(npcStateMachine.IdleState);
-        }*/
     }
 
     public override void OnExitState(BaseStateMachine controller)
     {
-        Debug.Log("NPCPatrolState:OnExitState");
+        Debug.Log("NPCFollowState:OnExitState");
         NPCStateMachine npcStateMachine = controller as NPCStateMachine;
 
         npcStateMachine.SetAgentSpeedMultiplier(1f);
     }
-
+    /*
     public Vector3 GetNearestHidingSpot(Vector3 position) 
     {
         if (HidingSpots.Length < 2)
@@ -66,5 +57,5 @@ public class NPCHideState : BaseState
         }
         
         return HidingSpots[shortestSqrtDistanceIndex].position;
-    }
+    }*/
 }
