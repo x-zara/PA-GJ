@@ -9,7 +9,7 @@ public class NPCPatrolState : BaseState
     private int _currentWaypointIndex;
 
     private Vector3 _targetPosition;
-
+    
     public override void OnEnterState(BaseStateMachine controller)
     {
         Debug.Log("NPCPatrolState:OnEnterState");

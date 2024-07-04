@@ -10,6 +10,7 @@ public class ZombieDamage : MonoBehaviour
 
     private float _currentRot;
 
+    private bool _hasHit;
 
     // Start is called before the first frame update
     void Start()
@@ -25,19 +26,24 @@ public class ZombieDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && _hasHit == false)
         {
+            _foodManagement.currentHealth -= zombieRot;
+            _hasHit = true;
             StartCoroutine(ApplyZombieRot());
-            
         }
     }
 
     IEnumerator ApplyZombieRot()
     {
-        _currentRot = _foodManagement.rotting;
-        _foodManagement.rotting = zombieRot;
-        yield return new WaitForSeconds(2.5f);
-        _foodManagement.rotting = _currentRot;
+        //_currentRot = _foodManagement.rotting;
+        //if(_foodManagement.rotting != zombieRot)
+        //{
+            //_foodManagement.rotting = zombieRot;
+            //yield return new WaitForSeconds(2f);
+        //}
+        yield return new WaitForSeconds(2f);
+        //_foodManagement.rotting = _currentRot;
         gameObject.SetActive(false);
     }
 }

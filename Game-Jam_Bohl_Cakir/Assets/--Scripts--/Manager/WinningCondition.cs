@@ -51,7 +51,7 @@ public class WinningCondition : MonoBehaviour
             _animator.SetBool("FadeIn", true);
         }
         
-        else if(_foodManagement.satiety <= 200)
+        else if(_foodManagement.satiety <= 100)
         {
             gameOverDialogue[1].gameObject.SetActive(true);
             _animator = gameOverDialogue[1].GetComponentInChildren<Animator>();
@@ -59,7 +59,7 @@ public class WinningCondition : MonoBehaviour
             _animator.SetBool("FadeIn", true);
         }
 
-        else if(_foodManagement.satiety > 200)
+        else if(_foodManagement.satiety > 100)
         {
             gameOverDialogue[2].gameObject.SetActive(true);
             _animator = gameOverDialogue[2].gameObject.GetComponentInChildren<Animator>();

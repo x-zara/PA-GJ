@@ -21,6 +21,7 @@ public class ShowFood : MonoBehaviour
     }
 
     // Update is called once per frame
+    // Shows and hides the contents of the cart, displaying how much the cart is holding at the moment
     void Update()
     {
         if (_foodManagment.satiety >= 50)

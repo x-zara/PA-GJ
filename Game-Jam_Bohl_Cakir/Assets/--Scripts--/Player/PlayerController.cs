@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
         // Set speed to half of input when charakter should walk
         // otherwise use horizontal input
-        float speed = inputMagnitude * 1.35f;
+        float speed = inputMagnitude * 1.5f;
 
         // Set animator isWalking parameter depending on input
         animator.SetBool(isWalkingParameterHash, inputMagnitude > 0);

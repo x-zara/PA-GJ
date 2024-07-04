@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9073a25339c78641a4f756596de45eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 10
+  Range: 5
   HeadReferenceTransform: {fileID: 7748145083630454808}
   Fov: 120
   DetectionLayer:
@@ -127,10 +127,7 @@ MonoBehaviour:
     MinWaitTime: 0
     MaxWaitTime: 0
   PatrolState:
-    Waypoints:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    Waypoints: []
   FleeState:
     FleeDistance: 0
   HideState:
@@ -170,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed30875e1f329db44b5da5cb58fa0dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieRot: 0.05
+  zombieRot: 0.2
 --- !u!1 &2776516922846392864
 GameObject:
   m_ObjectHideFlags: 0
