@@ -13,18 +13,7 @@ public class CursorManager : MonoBehaviour
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    public void OnApplicationFocus(bool focus)
-    {
-        /*if(focus)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }*/
-    }
-
+    // Cursor locked when playing, not locked when in menus
     private void Update()
     {
          if (_gameManager.isPaused)

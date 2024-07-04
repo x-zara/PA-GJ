@@ -8,7 +8,6 @@ public class NPCStateMachine : BaseStateMachine
     public bool CanHearPlayer { get => _ears.IsDetecting;  }
 
     public NPCIdleState IdleState;
-    public NPCPatrolState PatrolState;
     public NPCFleeState FleeState;
     public NPCHideState HideState;
 
@@ -21,12 +20,6 @@ public class NPCStateMachine : BaseStateMachine
 
     private float _initialAgentSpeed;
 
-#if UNITY_EDITOR
-    void OnDrawGizmos()
-    {
-        WaypointGizmos.DrawWayPoints(PatrolState.Waypoints);
-    }
-#endif
     public override void Initialize()
     {
         _eyes = GetComponentInChildren<Eyes>();

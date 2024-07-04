@@ -14,12 +14,8 @@ public class FoodCollect : MonoBehaviour
         _foodManagement = GameObject.Find("GameManager").GetComponent<FoodManagement>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
+    // Destroy instantiated items and add their stats
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Food"))

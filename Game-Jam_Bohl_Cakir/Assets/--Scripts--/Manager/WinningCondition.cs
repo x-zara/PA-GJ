@@ -39,6 +39,7 @@ public class WinningCondition : MonoBehaviour
         }
     }
 
+    // Looking at the parameters of items in the cart, set the right ending screen active
     private void OnTriggerEnter(Collider other)
     {
         _gameManager.isPaused = true;

@@ -14,12 +14,8 @@ public class ZombieAudioTrigger : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
+    // Play selfmade audio clip when the zombie starts chasing the player
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

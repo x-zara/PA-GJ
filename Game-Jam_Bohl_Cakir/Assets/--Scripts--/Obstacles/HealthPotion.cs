@@ -14,12 +14,7 @@ public class HealthPotion : MonoBehaviour
         _foodManagement = GameObject.Find("GameManager").GetComponent<FoodManagement>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Regains health to the freshness meter
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

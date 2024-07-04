@@ -13,15 +13,10 @@ public class IntroScreen : MonoBehaviour
         StartCoroutine(WaitTilDissolve());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Wait until the image dissolves by triggering the animation
     IEnumerator WaitTilDissolve()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(6.5f);
         _animator.SetBool("FadeIn", true);
     }
 }

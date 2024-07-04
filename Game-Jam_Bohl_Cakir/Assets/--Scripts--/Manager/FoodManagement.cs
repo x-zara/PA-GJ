@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FoodManagement : MonoBehaviour
 {
+    // Stores all values of items in the cart
     public static FoodManagement Instance { get; private set; }   
 
     public int satiety;
@@ -37,15 +38,7 @@ public class FoodManagement : MonoBehaviour
         
         print(currentHealth);
         
-        //StartCoroutine(Rot());
 
         currentHealth -= rotting * Time.deltaTime;
-    }
-
-    IEnumerator Rot()
-    {
-        yield return new WaitForSeconds(3);
-        currentHealth -= rotting;
-
     }
 }

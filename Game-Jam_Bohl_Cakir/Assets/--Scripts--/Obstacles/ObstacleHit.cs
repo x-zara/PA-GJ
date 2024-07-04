@@ -18,12 +18,7 @@ public class ObstacleHit : MonoBehaviour
         _audioSource = GameObject.Find("Player").GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Play audio on collision and trigger itemthrow
     private void OnCollisionEnter(Collision collision)
     {
         _audioSource.PlayOneShot(audioClip, 25f);

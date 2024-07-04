@@ -14,11 +14,7 @@ public class Food : MonoBehaviour
 
     private int _colliderDamage = 25;
 
-    private void Start()
-    {
-        
-    }
-
+    // Adds stats to foodmanagement when item gets added to cart
     public void AddStats()
     {
         FoodManagement.Instance.satiety += satiety;
@@ -29,6 +25,7 @@ public class Food : MonoBehaviour
         }
     }
 
+    // Removes satiety when a collider is being hit
     public void RemoveStats()
     {
         print("Hello");

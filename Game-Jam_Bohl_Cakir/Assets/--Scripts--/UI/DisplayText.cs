@@ -18,12 +18,8 @@ public class DisplayText : MonoBehaviour
         _label.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
+    // Shows and hides the UI label
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

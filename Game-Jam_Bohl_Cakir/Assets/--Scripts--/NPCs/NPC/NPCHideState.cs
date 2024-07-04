@@ -15,7 +15,7 @@ public class NPCHideState : BaseState
         Debug.Log("NPCPatrolState:OnEnterState");
         NPCStateMachine npcStateMachine = controller as NPCStateMachine;
         
-        //targetPosition = GetNearestHidingSpot(npcStateMachine.transform.position);
+        // follow player
         _playerTransform = GameObject.Find("Player").transform;
         npcStateMachine.SetDestination(_playerTransform.position);
         npcStateMachine.SetAgentSpeedMultiplier(1.5f);

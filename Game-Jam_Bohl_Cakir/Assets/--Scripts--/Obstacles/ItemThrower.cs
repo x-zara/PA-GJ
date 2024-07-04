@@ -27,13 +27,7 @@ public class ItemThrower : MonoBehaviour
         _foodSpawn = GameObject.Find("Trigger_Bakery").GetComponent<FoodSpawn>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    // Throws an item out of the cart
+    // Throws an item out of the cart and triggers removes stat
     public void ThrowItem()
     {
         float _zPosition = (_spawner.transform.position.z + UnityEngine.Random.Range(-_foodSpawn._zRange, _foodSpawn._zRange));

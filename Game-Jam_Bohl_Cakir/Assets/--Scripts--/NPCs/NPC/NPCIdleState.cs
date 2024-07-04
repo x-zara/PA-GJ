@@ -28,11 +28,6 @@ public class NPCIdleState : BaseState
         {
             npcStateMachine.SwitchToState(npcStateMachine.HideState);
         }
-        // Time is up > Switch to patrol
-        if(Time.time > leaveTime)
-        {
-            npcStateMachine.SwitchToState(npcStateMachine.PatrolState);
-        }
     }
 
     public override void OnExitState(BaseStateMachine controller)
